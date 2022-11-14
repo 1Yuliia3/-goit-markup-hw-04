@@ -93,7 +93,6 @@ ul {
 .site-nav{
     display: flex;
     list-style: none;
-   
 }
 .site-nav .item{
     margin-right: 40px;
@@ -214,15 +213,15 @@ ul {
 .feature-list .feature-list-item{
     flex-basis: calc((100% - 90px) / 4);
 }
-.feature-list-item::before{
+.feature-list-item:before{
     content: '';
-    display: inline-block;
-    width: 270px;
+    display: block;
     height: 120px;
     margin-bottom: 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: var(--secondary-bd-color);
-    background-image: url("../images/icon-antenna-1");
-
 }
 .feature-list .title {
     margin-top: 0;
@@ -316,11 +315,61 @@ ul {
     height: 100%;
     color: var(--primery-white-color);
     border-radius: 50%;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .team-icon{
-    fill: currentColor;
-    color: var(--icon-color);
+    fill: var(--icon-color);
+}
+.team-link:hover,
+.team-link:focus {
+    background-color: var(--accent-color);
+}
+.team-link:hover .team-icon{
+    fill: var(--primery-white-color);
+}
+.section-client{
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: var(--primery-white-color);
+}
+.client-title{
+    margin-top: 0px;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    color: var(--primary-text-color);
+}
+.client{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.client-item{
+    width: 170px;
+    height: 92px;
+}
+.client-link{
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.client-icon{
+    fill: var(--icon-color);
+}
+.client-link:hover,
+.client-link:focus{
+    border-color: var(--accent-color);
+}
+.client-link:hover .client-icon{
+    fill: var(--accent-color);
 }
 
 footer{
@@ -329,11 +378,18 @@ footer{
     background-color: #2F303A;
     height: 252px;
     margin: 0 auto;
- 
+}
+.footer-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+        align-items: baseline;
 }
 .logo-web{
     margin-bottom: 20px;
-   
 }
 .footer-logo {
     font-family: 'Raleway', sans-serif;
@@ -341,10 +397,8 @@ footer{
     font-size: 26px;
     line-height: 1.19;
     text-decoration: none;
-    color: var(--accent-color);
-    
+    color: var(--accent-color); 
 }
-
 .footer-web {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
@@ -355,7 +409,6 @@ footer{
 }
 .addres{
     flex-direction: column;
-    
 }
 .list-item{
     list-style: none;
@@ -385,15 +438,12 @@ footer{
     text-decoration: none;
     color: var(--title-text-color);
 }
-
 .footer-mail:hover,
 .footer-mail:focus {
     color: var(--accent-color);
 }
-
 .footer-contact {
     font-weight: 500;
-
     line-height: 1.14;
     letter-spacing: 0.02em;
     font-style: normal;
@@ -401,11 +451,49 @@ footer{
     text-decoration: none;
     color: var(--title-text-color);
 }
-
 .footer-contact:hover,
 .footer-contact:focus {
     color: var(--accent-color);
 }
+.footer-title{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: var(--primery-white-color);
+}
+.footer-social{
+    margin-left: 156px;
+}
+.social-list{
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    
+}
+.social-item{
+    width: 44px;
+    height: 44px;
+}
+.social-link{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-icon{
+    fill: var(--primery-white-color);
+}
+.social-link:hover,
+.social-link:focus{
+    background-color: var(--accent-color);
+}
+
+
 .page-portfolio{
     letter-spacing: 0.03em;
     font-size: 14px;
