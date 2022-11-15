@@ -191,6 +191,11 @@ ul {
 	letter-spacing: 0.06em;
 	margin: 0 auto;
 }
+.button:hover,
+.button:focus {
+	background-color: #188ce8;
+}
+
 .section {
 	padding-top: 94px;
 	padding-bottom: 94px;
@@ -334,6 +339,9 @@ ul {
 .team-link:hover .team-icon {
 	fill: var(--primery-white-color);
 }
+.team-link:focus .team-icon {
+	fill: var(--primery-white-color);
+}
 .section-client {
 	padding-top: 94px;
 	padding-bottom: 94px;
@@ -374,6 +382,9 @@ ul {
 	border-color: var(--accent-color);
 }
 .client-link:hover .client-icon {
+	fill: var(--accent-color);
+}
+.client-link:focus .client-icon {
 	fill: var(--accent-color);
 }
 
